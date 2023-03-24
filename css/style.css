@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'VT323', monospace;
+    src: url('../assets/fonts/VT323-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Oxanium', cursive;
+    src: url('../assets/fonts/Oxanium-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Oxanium', cursive;
+    src: url('../assets/fonts/Oxanium-Bold.ttf');
+    font-weight: 700;
+}
+
+:root{
+    --font-logo: 'VT323', monospace;
+    --font-title: 'Oxanium', cursive;
+    --font-text: 'Oxanium', cursive;
+
+    --color-base: #252525;
+    --color-inv: #dfdfdf;
+    --color-accent: #ffe570;
+    --color-text: #808080;
+}
+
+body{
+    position: relative;
+    font-size: 14px;
+    background-color: var(--color-base);
+}
+.test{
+    height: 2000px;
+}
+
+.header{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffe570;
+}
+.logo{
+    font-size: 2em;
+    font-family: var(--font-logo);
+}
+
+.wrapper{
+    margin: 0 auto;
+    padding: 0 20px; 
+    padding-top: 100px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+}
+
+.projects__card{
+    max-width: 300px;
+    background-color: var(--color-inv);
+}
+
+
+/* TABLET */
+@media screen and (min-width: 600px) {
+    body{
+        font-size: 16px;
+    }
+    .header{
+        height: 80px;
+    }
+    .wrapper{
+        padding-top: 120px;
+    }
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* LAPTOPS */
+@media screen and (min-width: 960px) {
+    body{
+        font-size: 18px;
+    }
+    .header{
+        height: 100px;
+    }
+    .wrapper{
+        padding-top: 120px;
+    }
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .projects__card{
+        max-width: 400px;
+    }
+}
+
+/* DESKTOP OR LARGER SCREENS*/
+@media screen and (min-width: 1440px) {
+    body{
+        font-size: 20px;
+    }
+    .header{
+        height: 100px;
+    }
+    .wrapper{
+        padding-top: 140px;
+        max-width: 1440px;
+    }
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .projects__card{
+        max-width: 400px;
+    }
+}
