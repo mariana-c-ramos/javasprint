@@ -18,7 +18,10 @@
     <main class="wrapper">
         <div class="grid projects">
             <div class="projects__card">
-                  <img src="assets/img/project-1.jpg" alt="preview of the project." class="project__preview">
+                <picture>
+                    <source media="(min-width:960px)" srcset="project-1-desk.jpg">
+                    <img src="assets/img/project-1.jpg" alt="preview of the project." class="project__preview">
+                  </picture>
                 <div class="project__info">
                     <p class="project__title">Snake Game</p>
                     <p class="project__details">Retro game that we all played when we were kids</p>
