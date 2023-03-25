@@ -18,18 +18,28 @@
 
 :root{
     --font-logo: 'VT323', monospace;
-    --font-title: 'Oxanium', cursive;
     --font-text: 'Oxanium', cursive;
 
     --color-base: #252525;
     --color-inv: #dfdfdf;
     --color-accent: #ffe570;
     --color-text: #808080;
+
+    --color-tech-html: #e54d27;
+    --color-tech-css: #006cc0;
+    --color-tech-sass: #cd679a;
+    --color-tech-boot: #8a0cfb;
+    --color-tech-tail: #49abb5;
+    --color-tech-js: #f7de30;
+    --color-tech-php: #787cb5;
+    --color-tech-react: #61dbfb;
+    --color-tech-three: #252525;
+
 }
 
 body{
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     background-color: var(--color-base);
 }
 .test{
@@ -47,14 +57,22 @@ body{
     background-color: #ffe570;
 }
 .logo{
+    padding: 10px;
     font-size: 2em;
     font-family: var(--font-logo);
+}
+.title{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: var(--font-text);
+    color: var(--color-inv);
+    margin-bottom: 30px;
 }
 
 .wrapper{
     margin: 0 auto;
     padding: 0 20px; 
-    padding-top: 100px;
+    padding-top: 120px;
 }
 .grid{
     display: grid;
@@ -66,19 +84,67 @@ body{
 .projects__card{
     max-width: 300px;
     background-color: var(--color-inv);
+    border-radius: 15px;
+}
+.projects__card:hover{
+    transform: rotate(5deg);
+    transition-duration: .5s;
+    cursor: pointer;
+}
+.project__preview{
+    border-radius: 15px 15px 0px 0px;
+}
+.project__info{
+    padding: 10px;
+}
+.project__title,
+.project__details,
+.project__techs{
+    font-family: var(--font-text);
+}
+.project__title{
+    font-weight: 700;
+    font-size: 1.25em;
+    margin-bottom: 2px;
+}
+.project__details{
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.project__techs{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.project__tech{
+    border-radius: 15px;
+    padding: 4px 8px;
+    font-weight: 700;
+}
+
+.project__tech-html{
+    background-color: var(--color-tech-html);
+}
+.project__tech-css{
+    background-color: var(--color-tech-css);
+}
+.project__tech-js{
+    background-color: var(--color-tech-js);
 }
 
 
 /* TABLET */
 @media screen and (min-width: 600px) {
     body{
-        font-size: 16px;
+        font-size: 18px;
     }
     .header{
         height: 80px;
     }
     .wrapper{
-        padding-top: 120px;
+        padding-top: 140px;
     }
     .grid{
         grid-template-columns: 1fr 1fr;
@@ -88,13 +154,13 @@ body{
 /* LAPTOPS */
 @media screen and (min-width: 960px) {
     body{
-        font-size: 18px;
+        font-size: 20px;
     }
     .header{
         height: 100px;
     }
     .wrapper{
-        padding-top: 120px;
+        padding-top: 140px;
     }
     .grid{
         grid-template-columns: 1fr 1fr 1fr;
@@ -107,13 +173,13 @@ body{
 /* DESKTOP OR LARGER SCREENS*/
 @media screen and (min-width: 1440px) {
     body{
-        font-size: 20px;
+        font-size: 22px;
     }
     .header{
         height: 100px;
     }
     .wrapper{
-        padding-top: 140px;
+        padding-top: 160px;
         max-width: 1440px;
     }
     .grid{
