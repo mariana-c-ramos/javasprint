@@ -118,6 +118,7 @@ body{
 .arrow{
     transform: rotate(-90deg);
     position: fixed;
+    display: none;
     right: 8px;
     bottom: 16px;
 }
