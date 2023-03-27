@@ -1,28 +1,10 @@
-@font-face {
-    font-family: 'VT323', monospace;
-    src: url('../assets/fonts/VT323-Regular.ttf');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Oxanium', cursive;
-    src: url('../assets/fonts/Oxanium-Regular.ttf');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Oxanium', cursive;
-    src: url('../assets/fonts/Oxanium-Bold.ttf');
-    font-weight: 700;
-}
-
 :root{
-    --font-logo: 'VT323', monospace;
-    --font-text: 'Oxanium', cursive;
+    --font-title: 'Press Start 2P', cursive;
+    --font-text: 'Fira Sans', sans-serif;
 
     --color-base: #252525;
     --color-inv: #dfdfdf;
-    --color-accent: #ffe570;
+    --color-accent: #ffcd41;
     --color-text: #808080;
 
     --color-tech-html: #e54d27;
@@ -42,9 +24,6 @@ body{
     font-size: 16px;
     background-color: var(--color-base);
 }
-.test{
-    height: 2000px;
-}
 
 .header{
     position: fixed;
@@ -54,24 +33,25 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #ffe570;
+    background: #ffcd41;
+    background: linear-gradient(122deg, #ffe976 0%, #ffcd41 50%, #ffad07 100%);
 }
 .logo{
     padding: 10px;
-    font-size: 2em;
-    font-family: var(--font-logo);
+    font-size: 1.25em;
+    font-family: var(--font-title);
 }
 .title{
     text-align: center;
-    font-size: 1.5em;
-    font-family: var(--font-text);
+    font-size: 1em;
+    font-family: var(--font-title);
     color: var(--color-inv);
     margin-bottom: 30px;
 }
 
 .wrapper{
     margin: 0 auto;
-    padding: 0 20px; 
+    padding: 20px; 
     padding-top: 120px;
 }
 .grid{
@@ -120,8 +100,9 @@ body{
 }
 .project__tech{
     border-radius: 15px;
-    padding: 4px 8px;
-    font-weight: 700;
+    padding: 4px 12px;
+    font-size: .8em;
+    font-weight: 400;
 }
 
 .project__tech-html{
@@ -132,6 +113,17 @@ body{
 }
 .project__tech-js{
     background-color: var(--color-tech-js);
+}
+
+.arrow{
+    transform: rotate(-90deg);
+    position: fixed;
+    right: 8px;
+    bottom: 16px;
+}
+.arrow:hover{
+    cursor: pointer;
+    filter:opacity(.8);
 }
 
 
