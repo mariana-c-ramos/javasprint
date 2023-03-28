@@ -1,24 +1,4 @@
-:root{
-    --font-title: 'Press Start 2P', cursive;
-    --font-text: 'Fira Sans', sans-serif;
-
-    --color-base: #1f1e25;
-    --color-card: #787683;
-    --color-acc: #ffcd41;
-    --color-title: #dfdfdf;
-    --color-text: #313131;
-
-    --color-tech-html: #e54d27;
-    --color-tech-css: #006cc0;
-    --color-tech-sass: #cd679a;
-    --color-tech-boot: #8a0cfb;
-    --color-tech-tail: #49abb5;
-    --color-tech-js: #f7de30;
-    --color-tech-php: #787cb5;
-    --color-tech-react: #61dbfb;
-    --color-tech-three: #252525;
-
-}
+@import url(vars.css);
 
 body{
     position: relative;
@@ -51,8 +31,13 @@ body{
     line-height: 1.5;
     margin-bottom: 30px;
 }
-
+.anchor{
+    font-size: .5em;
+    font-family: var(--font-title);
+    color: #fff;
+}
 .wrapper{
+    text-align: center;
     margin: 0 auto;
     padding: 20px; 
     padding-top: 120px;
