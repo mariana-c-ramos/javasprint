@@ -90,3 +90,6 @@ controls.forEach(key => {
 changeFoodPosition();
 setIntervalId = setInterval(startGame, 125); //125 makes it look like the movement is more "dragged"
 document.addEventListener("keydown", changeDiretion);
+
+
+// PROJECT #2 DRAG & DROP LIST
