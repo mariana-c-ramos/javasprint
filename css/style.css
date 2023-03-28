@@ -2,10 +2,11 @@
     --font-title: 'Press Start 2P', cursive;
     --font-text: 'Fira Sans', sans-serif;
 
-    --color-base: #252525;
-    --color-inv: #dfdfdf;
-    --color-accent: #ffcd41;
-    --color-text: #808080;
+    --color-base: #1f1e25;
+    --color-card: #787683;
+    --color-acc: #ffcd41;
+    --color-title: #dfdfdf;
+    --color-text: #313131;
 
     --color-tech-html: #e54d27;
     --color-tech-css: #006cc0;
@@ -26,6 +27,7 @@ body{
 }
 
 .header{
+    z-index: 1;
     position: fixed;
     height: 60px;
     width: 100%;
@@ -45,7 +47,8 @@ body{
     text-align: center;
     font-size: 1em;
     font-family: var(--font-title);
-    color: var(--color-inv);
+    color: var(--color-acc);
+    line-height: 1.5;
     margin-bottom: 30px;
 }
 
@@ -63,8 +66,9 @@ body{
 
 .projects__card{
     max-width: 300px;
-    background-color: var(--color-inv);
+    background-color: var(--color-card);
     border-radius: 15px;
+    box-shadow: 6px 6px 4px #000;
 }
 .projects__card:hover{
     transform: rotate(5deg);
@@ -81,11 +85,13 @@ body{
 .project__details,
 .project__techs{
     font-family: var(--font-text);
+    color: var(--color-text);
 }
 .project__title{
     font-weight: 700;
     font-size: 1.25em;
     margin-bottom: 10px;
+    color: var(--color-acc);
 }
 .project__details{
     font-weight: 400;
